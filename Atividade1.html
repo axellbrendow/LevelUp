@@ -1,35 +1,131 @@
-- As 3 camadas da interface:
+<style>
+    section
+    {
+        padding: 0.5em 2em;
+    }
 
-Composição: é a camada que faz um arranjo agradável dos conteúdos da aplicação. É também onde entram de forma mais efetiva os elementos de manipulação da interface como por exemplo a linguagem JavaScript e o CSS.
-Conteúdo: é a camada onde fica o conteúdo de fato. Todos os textos, imagens, vídeos e demais informações estão inseridos nessa camada. E é muito importante que a Camada de Controle e Navegação leve o usuário ao conteúdo.
-Controle e Navegação: é a camada que está relacionada ao acesso ao conteúdo. Também é onde o usuário terá as primeiras dificuldades para navegar pelos conteúdos e consumi-los. Sendo assim, é a parte crucial da interface por questões de usabilidade.
+    section:hover strong
+    {
+        background-color: lightgoldenrodyellow;
+        text-decoration: underline;
+    }
+    
+    section:nth-child(2n + 1)
+    {
+        background-color: #f2f5f9;
+    }
 
-- Por que o sistema de metáforas pode ser restritivo para alguns usuários ?
+    .hamburguer
+    {
+        position: relative;
+        display: inline-block;
+        background: #000;
+        width: 30px;
+        height: 2px;
+        top: -3px;
+    }
 
-Pode ser restritivo por não usar a metáfora certa para certos tipos de usuários. Um exemplo: o famoso botão de hamburguer das interfaces. O botão que abre os menus (3 barras horizontais). Conheço vários usuários mais velhos que nunca pensaram em tocar nele pois ele não os atraiu. Acredito que a analogia fosse simular algo parecido como uma lista de opções, por isso as 3 barras, mas não foi muito efetivo. Isso ainda é usado por ser um padrão.
+    .hamburguer:before,
+    .hamburguer:after
+    {
+        background: #000;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
 
-- Qual a importância da arquitetura de informação para um projeto de Front-end?
+    .hamburguer:before
+    {
+        top: -5px;
+    }
 
-Ela traz uma discussão sobre os 3 pilares das interfaces: conteúdo, usuário e contexto. Além disso, ela mostra os passos para: organizar o conteúdo, verificar se essa organização está boa para cada usuário, criar modelos genéricos de organização, criar fluxos de tarefas, definir as estruturas de navegação e realizar testes com protótipos.
+    .hamburguer:after
+    {
+        bottom: -5px;
+    }
+</style>
 
-Fala também sobre os seguintes conceitos:
+<section>
+    <h2>As 3 camadas da interface:</h2>
 
-Taxonomia: categorizar o conteúdo.
-Terminologia: cada contexto tem os termos adequados para apresentar o conteúdo.
-Ontologia: formas de representar o conhecimento em diferentes formas.
-Recuperação de informação e sistemas de navegação: como o usuário irá chegar à informação (recuperá-la).
-Quebra de conteúdo e unidades lógicas: importante principalmente quando um tópico é muito grande e é necessário quebrá-lo em unidades menores.
+    <ul>
+        <li>
+            <strong>Composição:</strong> é a camada que faz um arranjo agradável dos conteúdos da aplicação. É também onde entram de forma mais efetiva os elementos de manipulação da interface como por exemplo a linguagem JavaScript e o CSS.
+        </li>
+        <li>
+            <strong>Conteúdo:</strong> é a camada onde fica o conteúdo de fato. Todos os textos, imagens, vídeos e demais informações estão inseridos nessa camada. E é muito importante que a Camada de Controle e Navegação leve o usuário ao conteúdo.
+        </li>
+        <li>
+            <strong>Controle e Navegação:</strong> é a camada que está relacionada ao acesso ao conteúdo. Também é onde o usuário terá as primeiras dificuldades para navegar pelos conteúdos e consumi-los. Sendo assim, é a parte crucial da interface por questões de usabilidade.
+        </li>
+    </ul>
+</section>
 
+<section>
+    <h2>Por que o sistema de metáforas pode ser restritivo para alguns usuários ?</h2>
 
-- Explique a diferença de layout Líquido e Responsivo.
+    <ul>
+        <li>
+            <p>Pode ser restritivo por não usar <strong>a metáfora certa para certos tipos de usuários</strong>.</p>
+            <p><strong>Um exemplo:</strong> o famoso botão de hamburguer <span class="hamburguer"></span>, que geralmente é usado para abrir os menus. Conheço vários usuários adultos ou idosos que nunca pensaram em tocar nele pois não sentiram nada ao vê-lo. Acredito que a analogia desse botão fosse simular algo parecido com uma lista de opções, por isso as 3 barras, mas não foi muito efetivo. Porém, ainda sim é utilizado por ser um padrão.</p>
+        </li>
+    </ul>
+</section>
 
-O que difere os dois é a forma como se adaptam para resoluções diferentes.
+<section>
+    <h2>Qual a importância da arquitetura de informação para um projeto de Front-end?</h2>
 
-Layout líquido (ou fluído): a adaptação é mais baseada em porcentagens. A medida que a tela diminui, as divisões diminuem proporcionalmente.
-Layout responsivo: agrega também um pouco do layout líquido, porém, em alguns casos, invés de simplesmente diminuir as divisões proporcionalmente, altera a forma como elas estão dispostas na interface.
+    <p>Ela traz uma discussão sobre os <strong>3 pilares</strong> das interfaces: <strong>conteúdo, usuário e contexto</strong>. Além disso, ela mostra os passos para: organizar o conteúdo, verificar se essa organização está boa para cada usuário, criar modelos genéricos de organização, criar fluxos de tarefas, definir as estruturas de navegação e realizar testes com protótipos.</p>
+    <p>Fala também sobre os seguintes conceitos:</p>
 
-- Construa um exemplo de taxonomia que utilize navegação global, local e contextual.
+    <ul>
+        <li>
+            <strong>Taxonomia:</strong> categorizar o conteúdo.
+        </li>
+        <li>
+            <strong>Terminologia:</strong> cada contexto tem os termos adequados para apresentar o conteúdo.
+        </li>
+        <li>
+            <strong>Ontologia:</strong> diferentes formas de representar o conhecimento.
+        </li>
+        <li>
+            <strong>Recuperação de informação e sistemas de navegação:</strong> como o usuário irá chegar à informação (recuperá-la).
+        </li>
+        <li>
+            <strong>Quebra de conteúdo e unidades lógicas:</strong> importante principalmente quando um tópico é muito grande e é necessário quebrá-lo em unidades menores.
+        </li>
+    </ul>
+</section>
 
-Navegação global: links para as categorias do primeiro nível do site e menus de navegação que estão em todas as páginas.
-Navegação local: menus específicos para navegar em subáreas e seções do site.
-Navegação contextual: links relacionados ao conteúdo principal que está sendo apresentado.
+<section>
+    <h2>Explique a diferença de layout Líquido e Responsivo.</h2>
+
+    <p>O que difere os dois é a forma como se adaptam para resoluções diferentes:</p>
+
+    <ul>
+        <li>
+            <strong>Layout líquido (ou fluído):</strong> a adaptação é mais baseada em porcentagens. A medida que a tela diminui, as divisões diminuem proporcionalmente.
+        </li>
+        <li>
+            <strong>Layout responsivo:</strong> agrega também um pouco do layout líquido, porém, em alguns casos, invés de simplesmente diminuir as divisões proporcionalmente, altera a forma como elas estão dispostas na interface.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Construa um exemplo de taxonomia que utilize navegação global, local e contextual.</h2>
+
+    <ul>
+        <li>
+            <strong>Navegação global:</strong> links para as categorias do primeiro nível do site e menus de navegação que estão em todas as páginas.
+        </li>
+        <li>
+            <strong>Navegação local:</strong> menus específicos para navegar em subáreas e seções do site.
+        </li>
+        <li>
+            <strong>Navegação contextual:</strong> links relacionados ao conteúdo principal que está sendo apresentado.
+        </li>
+    </ul>
+</section>
