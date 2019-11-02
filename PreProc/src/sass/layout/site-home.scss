@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    width: 989px;
+    margin: 0 auto !important;
+  }
+
+  .site-logo {
+    width: 218px;
+    height: 120px;
+    display: inline-block;
+    background-image: url(../img/logo.png);
+  }
+  
+  .site-main {
+    display: block;
+    float: left;
+    width: 68%;
+  }
+  
+  .site-aside {
+    width: 28%;
+    float: left;
+  }
+  
+  .site-footer {
+    clear: both;
+  }
+  
+  .copyright {
+    clear: both;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  a, a:link, a:visited {
+    color: $color1;
+    text-decoration: none;
+  }

@@ -1,0 +1,29 @@
+/********************
+Componente site-menu
+********************/
+.site-menu {
+    clear: both;
+    height: 40px;
+    overflow: hidden;
+    color: white;
+    background-color: $color3;
+    margin: 10px 0;
+  }
+  .site-menu > a, .site-menu a:link, .site-menu a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  .site-menu > .lista {
+    margin: 0px;
+    list-style: none;
+  }
+  .site-menu > .lista > .item {
+    display: table-cell;
+    height: 40px;
+    padding: 0px 20px;
+    font-weight: bolder;
+    vertical-align: middle;
+  }
+  .site-menu > .lista > .item:hover, .site-menu a:hover {
+    background-color: #984447;
+  }

@@ -1,0 +1,26 @@
+/********************
+Componente article-box
+********************/
+.article-box {
+    margin-right: 20px;
+  }
+  .article-box > h2 {
+    color: #101419;
+    margin-bottom: 0;
+  }
+  .article-box > .detail {
+    margin: 0;
+    font-size: 80%;
+  }
+  .article-box > .detail > .category {
+    color: #984447;
+  }
+  .article-box > .texto {
+    color: #242424;
+    margin: 5px 0;
+  }
+  .article-box > .footer {
+    margin: 5px 0;
+    text-align: right;
+  }
+  

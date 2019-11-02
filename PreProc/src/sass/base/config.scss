@@ -1,0 +1,10 @@
+$color1: #984447;
+$color2: #add9f4;
+$color3: #101419;
+
+@mixin transition ($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
