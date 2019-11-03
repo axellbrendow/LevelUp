@@ -1,0 +1,12 @@
+.navbar-brand {
+  display: inline-flex;
+}
+
+.navbar-burger {
+  margin-left: 0;
+  margin-right: 2ch;
+  display: block;
+  height: auto;
+}
+
+/*# sourceMappingURL=index.css.map */
