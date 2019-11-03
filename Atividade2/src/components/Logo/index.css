@@ -1,11 +1,10 @@
-.footer {
-  padding-top: 120px;
-  border-top: 1px solid rgba(204, 204, 204, 0.69);
+.logo-root img {
+  height: 1em;
+  margin: 1em 0 0 1ch;
 }
 
-.content {
-  max-width: 520px;
-  margin: 0 auto;
+.logo-root a {
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

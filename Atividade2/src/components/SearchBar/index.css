@@ -1,43 +1,43 @@
-a {
+.searchbar-root a {
   margin-top: 8px;
 }
 
-.modal {
+.searchbar-root .modal {
   display: inherit;
 }
-.modal .close {
+.searchbar-root .modal .close {
   position: relative;
   color: #333;
   margin: 15px;
   font-size: 1.2em;
 }
-.modal .modal-content {
+.searchbar-root .modal .modal-content {
   margin: 0;
 }
-.modal input {
+.searchbar-root .modal input {
   color: #444;
   margin-top: 14px;
   outline: none;
   border: none;
 }
-.modal .modal-background {
+.searchbar-root .modal .modal-background {
   background-color: white;
 }
 
-.nav {
+.searchbar-root .nav {
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   margin-bottom: 6px;
 }
 
-.container {
+.searchbar-root .container {
   padding: 20px;
 }
 
-.media + .media {
+.searchbar-root .media + .media {
   padding-bottom: 15px;
 }
 
-.modal-content, .modal-card {
+.searchbar-root .modal-content, .searchbar-root .modal-card {
   max-height: calc(100vh - 20px);
 }
 

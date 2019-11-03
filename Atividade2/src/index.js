@@ -8,11 +8,12 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
 import Error404Page from "./pages/Error404Page";
+import HomePage from "./pages/HomePage";
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
-            <Route path={"/"} exact={true} component={Footer}/>
+            <Route path={"/"} exact={true} component={HomePage}/>
             <Route path={"/banner"} exact={true} component={Banner}/>
             <Route path={"*"} component={Error404Page}/>
         </Switch>

@@ -1,0 +1,12 @@
+[
+  {
+    "icon": "fa fa-home",
+    "text": "Home",
+    "route": "/"
+  },
+  {
+    "icon": "fa fa-gamepad",
+    "text": "Produtos",
+    "route": "/products"
+  }
+]

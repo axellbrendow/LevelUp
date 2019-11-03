@@ -1,9 +1,9 @@
-.footer {
+.footer-root .footer {
   padding-top: 120px;
   border-top: 1px solid rgba(204, 204, 204, 0.69);
 }
 
-.content {
+.footer-root .content {
   max-width: 520px;
   margin: 0 auto;
 }

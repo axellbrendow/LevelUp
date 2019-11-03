@@ -1,8 +1,8 @@
-a {
+.cartbar-root a {
   margin-top: 8px;
 }
 
-.tag {
+.cartbar-root .tag {
   padding: 0;
   height: 18px;
   border: 2px solid #ffffff;

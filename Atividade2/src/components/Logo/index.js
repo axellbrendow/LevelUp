@@ -1,9 +1,12 @@
 import React from 'react';
 import './index.css';
+import logo from '../../assets/super-store.svg';
 
 function Logo() {
   return (
-    <img src="../../assets/super-store.svg" alt="Super Store"/>
+    <div className={"logo-root"}>
+      <img src={logo} alt="Super Store"/>
+    </div>
   );
 }
 

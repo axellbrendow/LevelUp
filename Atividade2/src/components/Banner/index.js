@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import controle_sda17 from '../../assets/sda-control.svg';
 import './index.css';
 
 function Banner() {
   return (
-    <section className="hero is-dark is-bold is-medium">
+    <section className="banner-root hero is-dark is-bold is-medium">
       <div className="hero-body">
         <div className="container">
           <div className="columns is-mobile">

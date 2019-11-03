@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 function Error404Page() {
     return (
-        <div>
+        <div className={"error404page-root"}>
             <section className="hero is-warning is-fullheight">
                 <div className="hero-body">
                     <div className="container">

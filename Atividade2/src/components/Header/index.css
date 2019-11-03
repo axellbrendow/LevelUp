@@ -1,8 +1,8 @@
-.navbar-brand {
+.header-root .navbar-brand {
   display: inline-flex;
 }
 
-.navbar-burger {
+.header-root .navbar-burger {
   margin-left: 0;
   margin-right: 2ch;
   display: block;
