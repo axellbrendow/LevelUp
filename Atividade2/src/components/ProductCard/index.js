@@ -8,7 +8,7 @@ function ProductCard({product, addToCart, detailedView}) {
             <div className="card">
                 <div className="card-image">
                     <figure className="image is-4by3">
-                        <img src={"../../assets/games/" + product.image} alt="Product"/>
+                        <img src={require("../../assets/games/" + product.image)} alt="Product"/>
                     </figure>
                 </div>
 
