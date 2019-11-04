@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+	</head>
+
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			class Botao extends React.Component
+			{
+				constructor(props)
+				{
+					super(props);
+
+					this.state = {
+						contador: 0
+					};
+
+					this.incrementar = this.incrementar.bind(this);
+				}
+
+				incrementar()
+				{
+					const contador = this.state.contador;
+
+					this.setState(
+						{
+							contador: contador + 1
+						}
+					);
+				}
+
+				render()
+				{
+					return (
+						<div>
+							<button onClick={ this.incrementar }>Click me</button>
+							<button>{ this.state.contador }</button>
+						</div>
+					);
+				}
+			}
+
+			class Lista extends React.Component
+			{
+				constructor(props)
+				{
+					super(props);
+				}
+
+				render()
+				{
+					return (
+						<ul style={ { fontSize: '1.5em' } }>
+							{
+								this.props.lista.map( (elemento) => <li key={elemento}>{elemento}</li> )
+							}
+						</ul>
+					);
+				}
+			}
+
+			class Site extends React.Component
+			{
+				constructor(props)
+				{
+					super(props);
+				}
+
+				render()
+				{
+					return (
+						<div>
+							<h1>Meu Primeiro App em React</h1>
+							<Lista lista={ this.props.criadores }/>
+							<Botao/>
+						</div>
+					);
+				}
+			}
+
+			ReactDOM.render(<Site criadores={ [ 'Axell', 'Henrique' ] }/>, document.getElementById("root"));
+		</script>
+	</body>
+
+</html>
+
