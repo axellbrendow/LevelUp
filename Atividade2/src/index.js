@@ -9,12 +9,13 @@ import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
 import Error404Page from "./pages/Error404Page";
 import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route path={"/"} exact={true} component={HomePage}/>
-            <Route path={"/banner"} exact={true} component={Banner}/>
+            <Route path={"/products/:id"} exact={true} component={ProductPage}/>
             <Route path={"*"} component={Error404Page}/>
         </Switch>
     </HashRouter>,

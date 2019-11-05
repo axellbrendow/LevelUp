@@ -94,7 +94,7 @@ class Header extends React.Component {
                             </div>
 
                             <div className="navbar-item">
-                                <Cartbar cart={ {products: []} }/>
+                                <Cartbar cart={this.props.cart}/>
                             </div>
 
                         </div>

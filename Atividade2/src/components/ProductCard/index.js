@@ -2,9 +2,9 @@ import React from 'react';
 import './index.css';
 import {Link} from "react-router-dom";
 
-function ProductCard({product, addToCart, detailedView}) {
+function ProductCard({className = '', product, addToCart, detailedView}) {
     return (
-        <div className={"productcard-root"}>
+        <div className={"productcard-root " + className}>
             <div className="card">
                 <div className="card-image">
                     <figure className="image is-4by3">

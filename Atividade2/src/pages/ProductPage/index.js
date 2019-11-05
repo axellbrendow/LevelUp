@@ -3,24 +3,30 @@ import './index.css';
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
-import Banner from "../../components/Banner";
-import ProductList from "../../components/ProductList";
+import ProductCard from "../../components/ProductCard";
+import products from '../../products'
 
-class HomePage extends React.Component {
+class ProductPage extends React.Component {
 
     constructor(props)
     {
         super(props);
+
+        const productId = props.match.params.id;
+        const product = products.find((product) => product.id == productId);
+        console.log(product);
 
         this.state = {
             cart: {
                 products: []
             },
             isMenuVisible: false,
+            product,
         };
 
         this.showMenu = this.showMenu.bind(this);
         this.hideMenu = this.hideMenu.bind(this);
+        this.addToCart = this.addToCart.bind(this);
     }
 
     addToCart(product)
@@ -58,8 +64,9 @@ class HomePage extends React.Component {
                 <Menu isVisible={this.state.isMenuVisible}/>
 
                 <div onClick={this.hideMenu}>
-                    <Banner/>
-                    <ProductList cart={this.state.cart}/>
+                    <div className="container">
+                        <ProductCard addToCart={this.addToCart} product={this.state.product} detailedView={true}/>
+                    </div>
                     <Footer/>
                 </div>
             </div>
@@ -67,4 +74,4 @@ class HomePage extends React.Component {
     }
 }
 
-export default HomePage;
+export default ProductPage;

@@ -33,9 +33,7 @@ class ProductList extends React.Component {
         });
 
         this.state = {
-            cart: {
-                products: []
-            },
+            cart: props.cart,
         };
 
         this.listProducts = this.listProducts.bind(this);
