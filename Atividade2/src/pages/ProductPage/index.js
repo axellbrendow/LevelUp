@@ -14,7 +14,6 @@ class ProductPage extends React.Component {
 
         const productId = props.match.params.id;
         const product = products.find((product) => product.id == productId);
-        console.log(product);
 
         this.state = {
             cart: {

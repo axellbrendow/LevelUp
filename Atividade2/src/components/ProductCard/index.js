@@ -40,16 +40,16 @@ function ProductCard({className = '', product, addToCart, detailedView}) {
                     {
                         detailedView ?
                             <div className=" card-footer-item">
-                        <span className=" icon">
-                            <i className=" fa fa-bolt"/>
-                        </span>
+                                <span className=" icon">
+                                    <i className=" fa fa-bolt"/>
+                                </span>
                                 <small>{product.type + "· R$" + product.price}</small>
                             </div>
                             :
                             <Link to={product.route} className="card-footer-item">
-                          <span className=" icon">
-                            <i className=" fa fa-share"/>
-                          </span>
+                                <span className=" icon">
+                                    <i className=" fa fa-share"/>
+                                </span>
                             </Link>
                     }
 

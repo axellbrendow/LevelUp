@@ -21,6 +21,7 @@ class HomePage extends React.Component {
 
         this.showMenu = this.showMenu.bind(this);
         this.hideMenu = this.hideMenu.bind(this);
+        this.addToCart = this.addToCart.bind(this);
     }
 
     addToCart(product)
@@ -59,7 +60,7 @@ class HomePage extends React.Component {
 
                 <div onClick={this.hideMenu}>
                     <Banner/>
-                    <ProductList cart={this.state.cart}/>
+                    <ProductList addToCart={this.addToCart}/>
                     <Footer/>
                 </div>
             </div>
