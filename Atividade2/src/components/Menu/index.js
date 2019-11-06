@@ -25,7 +25,7 @@ function Menu({isVisible = false}) {
                                       options.map((option) =>
                                           <Link to={option.route} key={option.icon + option.text} className="columns is-mobile">
                                               <div className="column has-text-right is-one-quarter">
-                                                  <i className="{option.icon}"/>
+                                                  <i className={option.icon}/>
                                               </div>
                                               <div className="column">
                                                   <strong> {option.text} </strong>

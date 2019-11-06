@@ -46,16 +46,16 @@ class ProductList extends React.Component {
             <section className="productlist-root products">
                 <div className="container">
 
-                    {/*{
+                    {/* {
                     !this.props.loading ? null :
                         <h2 className="subtitle loading">
                             <br/><br/><br/>
                             <span>Carregando <strong>games...</strong></span>
                             <br/><br/><br/>
                         </h2>
-                }*/}
+                    } */}
 
-                    <div className=" columns is-desktop is-multiline">
+                    <div className="columns is-desktop is-multiline">
                         {
                             this.listProducts().map((product, i) =>
                                 <ProductCard key={product.id} className={"column" +

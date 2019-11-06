@@ -43,7 +43,7 @@ function ProductCard({className = '', product, addToCart, detailedView}) {
                                 <span className=" icon">
                                     <i className=" fa fa-bolt"/>
                                 </span>
-                                <small>{product.type + "· R$" + product.price}</small>
+                                <small>{product.type + " · R$" + product.price}</small>
                             </div>
                             :
                             <Link to={product.route} className="card-footer-item">
@@ -54,9 +54,9 @@ function ProductCard({className = '', product, addToCart, detailedView}) {
                     }
 
                     <button className=" card-footer-item" onClick={() => addToCart(product)}>
-                    <span className="icon">
-                        <i className="fa fa-cart-plus"/>
-                    </span>
+                        <span className="icon">
+                            <i className="fa fa-cart-plus"/>
+                        </span>
                     </button>
                 </footer>
             </div>

@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import {HashRouter, Switch, Route} from "react-router-dom";
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
-import ProductList from "./components/ProductList";
 import Error404Page from "./pages/Error404Page";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
+import 'font-awesome/css/font-awesome.min.css';
+import 'bulma/css/bulma.min.css';
 
 ReactDOM.render(
     <HashRouter>
