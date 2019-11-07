@@ -18,8 +18,16 @@
   margin: 20px 0 20px 0;
 }
 
-.productcard-root .card-footer-item{
-  font-size: 1.2em;
+.productcard-root .columns.is-mobile > .column {
+  padding: 0.2rem;
+}
+
+.productcard-root .columns.is-mobile > .column > .tag {
+  padding: 0.3rem;
+}
+
+.productcard-root .title.is-4 {
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -21,7 +21,7 @@ function ProductCard({className = '', product, addToCart, detailedView}) {
                         {
                             detailedView ? null :
                                 <div className=" column is-one-third has-text-right">
-                                    <span className=" tag is-warning is-medium">{"R$ " + product.price}</span>
+                                    <span className=" tag is-warning is-medium">{"R$ " + product.price.toFixed(2)}</span>
                                 </div>
                         }
 
@@ -43,7 +43,7 @@ function ProductCard({className = '', product, addToCart, detailedView}) {
                                 <span className=" icon">
                                     <i className=" fa fa-bolt"/>
                                 </span>
-                                <small>{product.type + " · R$" + product.price}</small>
+                                <small>{product.type + " · R$" + product.price.toFixed(2)}</small>
                             </div>
                             :
                             <Link to={product.route} className="card-footer-item">
