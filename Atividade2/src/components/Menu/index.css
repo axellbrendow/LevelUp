@@ -29,6 +29,7 @@
 
 .menu-root .hero-body.outer {
   padding: 0;
+  display: block !important;
 }
 
 .menu-root .hero-body.inner {
@@ -46,5 +47,3 @@
 .menu-root .margin-fix {
   margin-top: 0 !important;
 }
-
-/*# sourceMappingURL=index.css.map */

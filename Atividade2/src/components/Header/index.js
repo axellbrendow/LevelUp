@@ -17,8 +17,6 @@ class Header extends React.Component {
 
         this.showSearch = this.showSearch.bind(this);
         this.hideSearch = this.hideSearch.bind(this);
-        this.showMenu = this.showMenu.bind(this);
-        this.hideMenu = this.hideMenu.bind(this);
     }
 
     showSearch() {
@@ -27,14 +25,6 @@ class Header extends React.Component {
 
     hideSearch() {
         this.setState({isModalVisible: false});
-    }
-
-    showMenu() {
-        this.setState({isMenuVisible: true});
-    }
-
-    hideMenu() {
-        this.setState({isMenuVisible: false});
     }
 
     render() {
@@ -46,7 +36,7 @@ class Header extends React.Component {
 
                 <nav className="navbar animated slideInDown is-fixed-top" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
-                        <a role="button" className="navbar-burger burger" onClick={this.showMenu}
+                        <a role="button" className="navbar-burger burger" onClick={this.props.showMenu}
                            aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                             <span aria-hidden="true"/>
                             <span aria-hidden="true"/>

@@ -3,10 +3,9 @@ import './index.css';
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
-import Banner from "../../components/Banner";
 import ProductList from "../../components/ProductList";
 
-class HomePage extends React.Component {
+class ProductsPage extends React.Component {
 
     constructor(props)
     {
@@ -59,7 +58,6 @@ class HomePage extends React.Component {
                 <Menu isVisible={this.state.isMenuVisible}/>
 
                 <div onClick={this.hideMenu}>
-                    <Banner/>
                     <ProductList addToCart={this.addToCart}/>
                     <Footer/>
                 </div>
@@ -68,4 +66,4 @@ class HomePage extends React.Component {
     }
 }
 
-export default HomePage;
+export default ProductsPage;

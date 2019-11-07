@@ -8,11 +8,14 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import 'font-awesome/css/font-awesome.min.css';
 import 'bulma/css/bulma.min.css';
+import './animate.css';
+import ProductsPage from './pages/ProductsPage';
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route path={"/"} exact={true} component={HomePage}/>
+            <Route path={"/products"} exact={true} component={ProductsPage}/>
             <Route path={"/products/:id"} exact={true} component={ProductPage}/>
             <Route path={"*"} component={Error404Page}/>
         </Switch>
