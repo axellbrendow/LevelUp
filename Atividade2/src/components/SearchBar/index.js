@@ -11,37 +11,33 @@ class SearchBar extends React.Component {
 
         this.state = {
             loading,
+            keyword: '',
             products
         };
 
-        this.submit = this.submit.bind(this);
-        this.hideModal = this.hideModal.bind(this);
+        this.onChange = this.onChange.bind(this);
         this.goTo = this.goTo.bind(this);
     }
 
-    submit(e) { // e = evento do formulario
-        e.preventDefault(); // previnir reload no browser
+    onChange(e) {
 
-        if (this.keyword) {
-            this.submitted = true;
+        const keyword = e.target.value.toLocaleLowerCase();
 
-            this.products.search(this.keyword).then(
-                (products) => {
-                    this.products = products;
-                    if (products.length) this.submitted = false;
-                }
+        if (keyword) {
+            this.setState({
+                keyword
+            });
+    
+            this.cart.products.filter(
+                (product) => product.name.toLocaleLowerCase().indexOf(keyword) != -1
             );
         }
     }
 
-    hideModal() {
-        this.closeSearch.emit();
-    }
-
     goTo(product) {
-        this.hideModal();
-        this.router.navigate([product.router]);
-        this.products.scrollTop();
+        this.props.hideSearch();
+        // this.router.navigate([product.router]);
+        // this.products.scrollTop();
     }
 
     render() {
@@ -55,15 +51,16 @@ class SearchBar extends React.Component {
                         <nav className="nav">
 
                             <div className="nav-left">
-                                <a className="close is-large" onClick={this.hideModal}><i
+                                <a className="close is-large" onClick={this.props.hideSearch}><i
                                     className="fa fa-long-arrow-left"/> Voltar</a>
 
-                                <form noValidate onSubmit={(event) => this.submit(event)} /*#searchForm="ngForm"*/>
+                                <form noValidate onSubmit={(e) => e.preventDefault()}>
                                     <div className="field">
                                         <div className="control">
-                                            <input /*[(ngModel)]="keyword"*/ name="keyword" type="text"
-                                                                             className="input is-rounded"
-                                                                             placeholder="Busque um produto"/>
+                                            <input name="keyword" type="text"
+                                                    className="input is-rounded"
+                                                    placeholder="Busque um produto"
+                                                    onChange={this.onChange}/>
                                         </div>
                                     </div>
                                 </form>
@@ -93,7 +90,7 @@ class SearchBar extends React.Component {
                                                 <p>
                                                     <strong>{product.name}</strong>
                                                     <br/>
-                                                    <small>{product.type + "·" + product.year}</small>
+                                                    <small>{product.type + " · " + product.year}</small>
                                                 </p>
                                             </div>
                                         </div>
@@ -103,7 +100,7 @@ class SearchBar extends React.Component {
                             }
 
                             {
-                                this.props.keyword ? null :
+                                this.state.keyword ? null :
                                     <small>Digite e pressione enter</small>
                             }
 

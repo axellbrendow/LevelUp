@@ -31,7 +31,7 @@ class Header extends React.Component {
         return (
             <div className={"header-root"}>
                 {
-                    !this.props.isModalVisible ? null : <SearchBar closeSearch={this.hideSearch}/>
+                    !this.props.isModalVisible ? null : <SearchBar cart={this.props.cart} hideSearch={this.hideSearch}/>
                 }
 
                 <nav className="navbar animated slideInDown is-fixed-top" role="navigation" aria-label="main navigation">
